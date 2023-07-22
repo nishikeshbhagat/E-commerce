@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Availability</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Availability</h1>
+    <form id="stockForm">
+      <div class="form-group">
+        <label for="product">Product:</label>
+        <input type="text" id="product" required>
+      </div>
+      <button type="submit">Check Availability</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("stockForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var product = document.getElementById("product").value;
+
+      // Check stock availability
+      var availableStock = checkStockAvailability(product);
+
+      // Display the result
+      var resultElement = document.getElementById("result");
+      if (availableStock > 0) {
+        resultElement.textContent = "The product is available. Stock: " + availableStock;
+      } else {
+        resultElement.textContent = "The product is out of stock.";
+      }
+    });
+
+    // Dummy function to check stock availability
+    function checkStockAvailability(product) {
+      // Replace this with your own logic to check the stock availability
+      // Return the available stock quantity based on the product name
+      if (product === "Product 1") {
+        return 10;
+      } else if (product === "Product 2") {
+        return 5;
+      } else if (product === "Product 3") {
+        return 0;
+      } else {
+        return -1; // Invalid product
+      }
+    }
+  </script>
+</body>
+</html>

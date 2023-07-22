@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Mart - Sign In</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    /* Form styles */
+    .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <img src="E:\logo.jpg" alt="Bakery Logo" class="logo" style="width:70px">
+    <h1>Food Mart</h1>
+ <nav>
+      <button class="menu-toggle">&#9776;</button>
+      <ul>
+        <li><a href="E:\foodecommerce.html" class="active">Home</a></li>
+        <li><a href="E:\product.html" class="active">Products</a></li>
+        <li><a href="E:\about.html" class="active">About Us</a></li>
+        <li><a href="E:\contact.html" class="active">Contact</a></li>
+        <li><a href="E:\signin.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+</header>
+  <div class="form-container">
+    <h2>Sign In</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="text" id="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Sign In</button>
+	<a href="file:///E:/forgot-password.html">Forgot Password</a>
+    </form>
+  </div>
+
+</body>
+</html>

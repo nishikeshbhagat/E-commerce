@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Mart - Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+/* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #000;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-right: 10px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #ccc;
+    }
+
+    /* Products section styles */
+    #products {
+      background-color: #fff;
+      padding: 40px 0;
+    }
+
+    #products .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #products h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      margin-bottom: 20px;
+    }
+
+    .product-card .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .product-card .btn:hover {
+      background-color: #333;
+    }
+
+    .product-card .order-btn {
+      background-color: #008000;
+      margin-right: 5px;
+    }
+
+    .product-card .availability-btn {
+      background-color: #ff0000;
+    }
+
+    .product-card .unavailable-btn {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    /* Cart styles */
+    #cart {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #cart h2 {
+      margin-bottom: 10px;
+    }
+
+    #cart ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    #cart li {
+      margin-bottom: 10px;
+    }
+
+    #cart .remove-btn {
+      color: red;
+      cursor: pointer;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #000;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="E:\logo.jpg" alt="Bakery Logo" class="logo" style="width:70px">
+    <h1>Food Mart</h1>
+    <nav>
+      <ul>
+        <li><a href="E:\foodecommerce.html" class="active">Home</a></li>
+        <li><a href="E:\product.html" class="active">Products</a></li>
+        <li><a href="E:\about.html" class="active">About Us</a></li>
+        <li><a href="E:\contact.html" class="active">Contact</a></li>
+        <li><a href="E:\signin.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="E:\cake1.jpg" alt="Product 1" width="300px" height="300px">
+          <h3>Brownie</h3>
+          <p>These little blocks of goodness are another popular bakery item. And when you think of brownies, you think of Theobroma.Brownies are one of our bestselling bakery items, and these heavenly creations are an instant mood-lifter.</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 550</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="E:\cake2.jpg" alt="Product 2" width="300px" height="300px">
+          <h3>Pillsbury</h3>
+          <p>Give your taste buds, a delectable experience with the unique combination of yummy strawberry flavored cream filling in between two strawberry layers of soft cake.</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 780</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="E:\cake3.jpg" alt="Product 3" width="300px" height="300px">
+          <h3>Bigwishbox Truffle Cake</h3>
+          <p>Chocolate Cake come with delicious taste and freshness of the product.This cake is hand delivered in a good quality cardboard box.
+Shape: Round & Type of Cake: Chocolate</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 678</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="E:\product4.jpg" alt="Product 4">
+          <h3>Elite Cake - Rich Plum</h3>
+          <p>Cantains Added Synthetic Flavours( Vanilla, Lemon) And Natural Colour(Caramel). Ingradients:Soaked Flavours, Wheat Flour, Egg, Sugar, Ghee, Edible Vegtable Fat</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 250</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="E:\product5.jpg" alt="Product 5">
+          <h3>Almond Millet Biscuits</h3>
+          <p>The Almonds Biscuits from Karachi Bakery are known for their crispy and crumbly texture.The Almonds are finely chopped or ground and incorporated into the biscuit dough, adding a satisfying crunch and enhancing the overall flavor profile.</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 215</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+        <div class="product-card">
+          <img src="E:\product6.jpg" alt="Product 6">
+          <h3>Cookies And Crackers</h3>
+          <p>We are a tea-drinking nation, and teatime is incomplete without the right snacks to go with your warm cup of chai. Cookies and crackers fit the bill quite well and that’s why they’re popular bakery items in India.</p>
+          <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 199</p>
+          <div class="button-group">
+            <a href="file:///E:/ordernow.html" class="btn order-btn">Order Now</a>
+            <a href="file:///E:/stock.html" class="btn availability-btn">Stock Availability</a>
+          </div>
+          <a href="#" class="btn" onclick="addToCart(event)">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cart">
+    <div class="container">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Cart</h2>
+      <ul id="cart-items"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Food Mart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add to Cart
+    function addToCart(event) {
+      event.preventDefault();
+      var product = event.target.parentNode;
+      var productName = product.querySelector("h3").innerText;
+      var cartItems = document.getElementById("cart-items");
+      var cartItem = document.createElement("li");
+      cartItem.innerText = productName;
+      cartItems.appendChild(cartItem);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

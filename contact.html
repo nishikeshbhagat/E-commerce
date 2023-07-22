@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Mart - Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #000;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-right: 10px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #ccc;
+    }
+
+    /* Contact section styles */
+    #contact {
+      background-color: #fff;
+      padding: 40px 0;
+    }
+
+    #contact .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #contact h2 {
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      margin-bottom: 40px;
+    }
+
+    #contact form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #contact form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #contact form input,
+    #contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #contact form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    #contact form button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #contact form button:hover {
+      background-color: #333;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #000;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="E:\logo.jpg" alt="Bakery Logo" class="logo" style="width:70px">
+    <h1>Food Mart</h1>
+    <nav>
+      <ul>
+        <li><a href="E:\foodecommerce.html" class="active">Home</a></li>
+        <li><a href="E:\product.html" class="active">Products</a></li>
+        <li><a href="E:\about.html" class="active">About Us</a></li>
+        <li><a href="E:\contact.html" class="active">Contact</a></li>
+        <li><a href="E:\signin.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <div class="container">
+      <h2><i class="fa-solid fa-address-book"></i>Contact Us<i class="fa-solid fa-address-book"></i></h2>
+      <p>For any inquiries or feedback, please use the contact form below.</p>
+      <form action="file:///E:/contact.html" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <img src="E:\contact.jpg" alt="Contact Image">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Food Mart. All rights reserved.</p>
+  </footer>
+</body>
+</html>
